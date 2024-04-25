@@ -68,6 +68,12 @@ add_filter(
 			'かいているひと',
 			$html
 		);
+		
+		$html = preg_replace(
+			'/<div\s*class="wp-profile-box__buttons">\s*<a\s+class="wp-profile-box__archives-btn"\s+href=".+">.+<\/a>\s*<\/div>/s',
+			'',
+			$html
+		);		
 		return $html;
 	},
 	10,
